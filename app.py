@@ -8,6 +8,7 @@ from sklearn.externals import joblib
 import pickle
 
 # load the model from disk
+nltk.data.path.append('./nltk_data/')
 filename = '/home/muhammad/Desktop/new_sent/nlp_model.pkl'
 NB = pickle.load(open(filename, 'rb'))
 tfidf_vectorizer = pickle.load(open('/home/muhammad/Desktop/new_sent/transform.pkl','rb'))
@@ -19,7 +20,6 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-nltk.data.path.append('./nltk_data/')
 
 	if request.method == 'POST':
 		message = request.form['message']
