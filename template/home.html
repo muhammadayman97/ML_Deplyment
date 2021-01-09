@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			First Machine Learning Deployment with Flask
+		</div>
+		<h2>Sentiment analysis for Rotten Tomatoes movie reviews</h2>
+		<img src="https://www.google.com/url?sa=i&url=http%3A%2F%2Ft1.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSChgby8IKOrIdDM5acY3dHsPQVYX8bb4NyXLk11OwrAh4qtzhE&psig=AOvVaw2I8__c2VYBqn7Z6CBrDN0g&ust=1610279691044000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCQ-b3nju4CFQAAAAAdAAAAABAM/download.png" alt="Simply Easy Learning" width="200"
+         height="80">
+
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Write your review Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="6" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+	</div>
+   		
+
+	
+	
+
+</body>
+</html>

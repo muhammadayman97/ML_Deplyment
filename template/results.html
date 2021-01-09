@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML model deployment
+		</div>
+		<h2>Your review is</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b></b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 0%}
+	<h2 style="color:red;">negative</h2>
+	{% elif prediction == 1%}
+	<h2 style="color:red;">somewhat negative</h2>
+	{% elif prediction == 2%}
+	<h2 style="color:black;">neutral</h2>
+	{% elif prediction == 3%}
+	<h2 style="color:blue;">somewhat positive</h2>
+	{% elif prediction == 4%}
+	<h2 style="color:blue;">positive</h2>
+	{% endif %}
+
+	</div>
+ 
+	<input type="reset" value="Go back!" onclick="history.back()">
+
+</body>
+</html>
+
+
