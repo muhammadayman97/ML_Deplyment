@@ -6,6 +6,8 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.externals import joblib
 import pickle
+import nltk
+nltk.path.append('/home/muhammad/Desktop/new_sent/nltk_data/')
 
 # load the model from disk
 filename = '/home/muhammad/Desktop/new_sent/nlp_model.pkl'
