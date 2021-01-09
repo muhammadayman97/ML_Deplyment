@@ -15,6 +15,8 @@ filename = '/home/muhammad/Desktop/new_sent/nlp_model.pkl'
 NB = pickle.load(open(filename, 'rb'))
 tfidf_vectorizer = pickle.load(open('/home/muhammad/Desktop/new_sent/transform.pkl','rb'))
 app = Flask(__name__, template_folder='template')
+RUN python -m nltk.downloader popular
+
 
 @app.route('/')
 def home():
