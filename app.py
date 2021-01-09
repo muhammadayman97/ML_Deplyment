@@ -8,6 +8,8 @@ from sklearn.externals import joblib
 import pickle
 
 # load the model from disk
+nltk.download('wordnet')
+nltk.download('stopwords')
 nltk.data.path.append('./nltk_data/')
 filename = '/home/muhammad/Desktop/new_sent/nlp_model.pkl'
 NB = pickle.load(open(filename, 'rb'))
