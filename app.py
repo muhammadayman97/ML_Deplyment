@@ -2,6 +2,7 @@ from flask import Flask,render_template,url_for,request
 import pandas as pd 
 import pickle
 import nltk
+from nltk.downloader import download, download_shell 
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.externals import joblib
